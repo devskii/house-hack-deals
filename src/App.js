@@ -1,24 +1,16 @@
 import "./App.css";
+import LabeledInput from "./LabeledInput";
 
 function App() {
   return (
     <>
-      <label>
-        <input data-testid="input-monthly-payment" />
-        Monthly Payment
-      </label>
-      <label>
-        <input data-testid="input-monthly-rent" />
-        Monthly Rent
-      </label>
-      <label>
-        <input data-testid="input-reserves" />
-        Reserves
-      </label>
-      <label>
-        <input data-testid="input-net-worth-roi" />
-        Net Worth ROI
-      </label>
+      <LabeledInput
+        testid="input-monthly-payment"
+        labelText="Monthly Payment"
+      />
+      <LabeledInput testid="input-monthly-rent" labelText="Monthly Rent" />
+      <LabeledInput testid="input-reserves" labelText="Reserves" />
+      <LabeledInput testid="input-net-worth-roi" labelText="Net Worth ROI" />
     </>
   );
 }
