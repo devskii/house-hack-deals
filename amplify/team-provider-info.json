@@ -1,38 +1,44 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-househackdeals-dev-173812-authRole",
-      "UnauthRoleArn": "arn:aws:iam::739469790335:role/amplify-househackdeals-dev-173812-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::739469790335:role/amplify-househackdeals-dev-173812-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-househackdeals-dev-173812-deployment",
-      "UnauthRoleName": "amplify-househackdeals-dev-173812-unauthRole",
-      "StackName": "amplify-househackdeals-dev-173812",
-      "StackId": "arn:aws:cloudformation:us-east-1:739469790335:stack/amplify-househackdeals-dev-173812/de1c9700-3607-11ed-8323-0acf1e47e207",
-      "AmplifyAppId": "d37bsvpxyauuia"
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-househackdeals-dev-173812-authRole",
+            "UnauthRoleArn": "arn:aws:iam::739469790335:role/amplify-househackdeals-dev-173812-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::739469790335:role/amplify-househackdeals-dev-173812-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-househackdeals-dev-173812-deployment",
+            "UnauthRoleName": "amplify-househackdeals-dev-173812-unauthRole",
+            "StackName": "amplify-househackdeals-dev-173812",
+            "StackId": "arn:aws:cloudformation:us-east-1:739469790335:stack/amplify-househackdeals-dev-173812/de1c9700-3607-11ed-8323-0acf1e47e207",
+            "AmplifyAppId": "d37bsvpxyauuia"
+        },
+        "categories": {
+            "auth": {
+                "househackdeals90942f61": {}
+            }
+        }
     },
-    "categories": {
-      "auth": {
-        "househackdeals90942f61": {}
-      }
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-househackdeals-prod-174423-authRole",
+            "UnauthRoleArn": "arn:aws:iam::739469790335:role/amplify-househackdeals-prod-174423-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::739469790335:role/amplify-househackdeals-prod-174423-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-househackdeals-prod-174423-deployment",
+            "UnauthRoleName": "amplify-househackdeals-prod-174423-unauthRole",
+            "StackName": "amplify-househackdeals-prod-174423",
+            "StackId": "arn:aws:cloudformation:us-east-1:739469790335:stack/amplify-househackdeals-prod-174423/bb2f9750-3608-11ed-b713-0edd958272b9",
+            "AmplifyAppId": "d37bsvpxyauuia"
+        },
+        "categories": {
+            "auth": {
+                "househackdeals90942f61": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d37bsvpxyauuia",
+                    "type": "cicd"
+                }
+            }
+        }
     }
-  },
-  "prod": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-househackdeals-prod-174423-authRole",
-      "UnauthRoleArn": "arn:aws:iam::739469790335:role/amplify-househackdeals-prod-174423-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::739469790335:role/amplify-househackdeals-prod-174423-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-househackdeals-prod-174423-deployment",
-      "UnauthRoleName": "amplify-househackdeals-prod-174423-unauthRole",
-      "StackName": "amplify-househackdeals-prod-174423",
-      "StackId": "arn:aws:cloudformation:us-east-1:739469790335:stack/amplify-househackdeals-prod-174423/bb2f9750-3608-11ed-b713-0edd958272b9",
-      "AmplifyAppId": "d37bsvpxyauuia"
-    },
-    "categories": {
-      "auth": {
-        "househackdeals90942f61": {}
-      }
-    }
-  }
 }
