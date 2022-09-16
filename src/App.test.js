@@ -1,8 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders number inputs", () => {
+beforeEach(() => {
   render(<App />);
+});
+
+test("renders number inputs", () => {
   expect(screen.getByTestId("input-monthly-payment")).toBeInTheDocument();
   expect(screen.getByTestId("input-monthly-rent")).toBeInTheDocument();
   expect(screen.getByTestId("input-reserves")).toBeInTheDocument();
@@ -10,7 +13,6 @@ test("renders number inputs", () => {
 });
 
 test("renders the correct label for each number input", () => {
-  render(<App />);
   expect(screen.getByLabelText("Monthly Payment")).toContainElement(
     screen.getByTestId("input-monthly-payment")
   );
