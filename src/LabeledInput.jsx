@@ -1,5 +1,5 @@
 const LabeledInput = (props) => {
-  const { testid, value, labelText } = props;
+  const { testid, value, labelText, stateHook } = props;
   return (
     <label>
       <input
@@ -7,6 +7,7 @@ const LabeledInput = (props) => {
         data-testid={testid}
         className="border"
         value={value}
+        onChange={(event) => stateHook(parseInt(event.target.value))}
       />
       {labelText}
     </label>

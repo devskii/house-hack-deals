@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
 
 beforeEach(() => {
@@ -32,7 +32,7 @@ test("renders default value for each input", () => {
     screen.getByDisplayValue("3000")
   );
   expect(screen.getByTestId("input-monthly-rent")).toBe(
-    screen.getByDisplayValue("3300")
+    screen.getByDisplayValue("3400")
   );
   expect(screen.getByTestId("input-reserves")).toBe(
     screen.getByDisplayValue("375")
@@ -42,9 +42,23 @@ test("renders default value for each input", () => {
   );
 });
 
-test("renders expected profit", () => {});
+test("renders default expected profit", () => {
+  expect(screen.getByText("$25/mo = Expected Profit")).toBeInTheDocument();
+});
 
-test("renders expected profit based on inputs", () => {
-  // const inputMonthlyPaymentElement = screen.getByTestId("input-monthly-payment");
-  // fireEvent.change()
+test("re-renders expected profit when input values change", () => {
+  const inputMonthlyPaymentElement = screen.getByTestId(
+    "input-monthly-payment"
+  );
+  const inputMonthlyRentElement = screen.getByTestId("input-monthly-rent");
+  const inputReservesElement = screen.getByTestId("input-reserves");
+
+  fireEvent.change(inputMonthlyPaymentElement, { target: { value: 2999 } });
+  expect(screen.getByText("$26/mo = Expected Profit")).toBeInTheDocument();
+
+  fireEvent.change(inputMonthlyRentElement, { target: { value: 3401 } });
+  expect(screen.getByText("$27/mo = Expected Profit")).toBeInTheDocument();
+
+  fireEvent.change(inputReservesElement, { target: { value: 374 } });
+  expect(screen.getByText("$28/mo = Expected Profit")).toBeInTheDocument();
 });
