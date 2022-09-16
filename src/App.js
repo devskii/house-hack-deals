@@ -4,10 +4,22 @@ import "./App.css";
 function App() {
   return (
     <>
-      <input data-testid="input-monthly-payment" />
-      <input data-testid="input-monthly-rent" />
-      <input data-testid="input-reserves" />
-      <input data-testid="input-net-worth-roi" />
+      <label>
+        <input data-testid="input-monthly-payment" />
+        Monthly Payment
+      </label>
+      <label>
+        <input data-testid="input-monthly-rent" />
+        Monthly Rent
+      </label>
+      <label>
+        <input data-testid="input-reserves" />
+        Reserves
+      </label>
+      <label>
+        <input data-testid="input-net-worth-roi" />
+        Net Worth ROI
+      </label>
     </>
   );
 }
