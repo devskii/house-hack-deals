@@ -1,8 +1,14 @@
 const LabeledInput = (props) => {
+  const { testid, value, labelText } = props;
   return (
     <label>
-      <input data-testid={props.testid} className="border" />
-      {props.labelText}
+      <input
+        type="number"
+        data-testid={testid}
+        className="border"
+        value={value}
+      />
+      {labelText}
     </label>
   );
 };

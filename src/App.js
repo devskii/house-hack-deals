@@ -7,10 +7,19 @@ function App() {
       <LabeledInput
         testid="input-monthly-payment"
         labelText="Monthly Payment"
+        value={3000}
       />
-      <LabeledInput testid="input-monthly-rent" labelText="Monthly Rent" />
-      <LabeledInput testid="input-reserves" labelText="Reserves" />
-      <LabeledInput testid="input-net-worth-roi" labelText="Net Worth ROI" />
+      <LabeledInput
+        testid="input-monthly-rent"
+        labelText="Monthly Rent"
+        value={3300}
+      />
+      <LabeledInput testid="input-reserves" labelText="Reserves" value={375} />
+      <LabeledInput
+        testid="input-net-worth-roi"
+        labelText="Net Worth ROI"
+        value={100}
+      />
     </div>
   );
 }
