@@ -33,12 +33,7 @@
             "auth": {
                 "househackdeals90942f61": {}
             },
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d37bsvpxyauuia",
-                    "type": "cicd"
-                }
-            }
+            "hosting": {}
         }
     }
 }
