@@ -13,6 +13,18 @@ function App() {
 
   const expectedProfit = monthlyRent - monthlyPayment - reserves;
 
+  function computeNetWorthRoi() {
+    const appreciation = 0.034 * purchasePrice;
+    const annualLoanPaydown = 12 * monthlyLoanPaydown;
+
+    const netGains =
+      appreciation +
+      annualRentSavings +
+      12 * expectedProfit +
+      annualLoanPaydown;
+    return Math.round((100 * netGains) / initialInvestment);
+  }
+
   return (
     <div className="flex flex-col">
       <p>${expectedProfit}/mo = Expected Profit</p>
@@ -35,26 +47,30 @@ function App() {
         stateHook={setReserves}
       />
       <br />
-      <p>162% = Net Worth ROI (first year)</p>
+      <p>{computeNetWorthRoi()}% = Net Worth ROI (first year)</p>
       <LabeledInput
         testid="input-annual-rent-savings"
         labelText="Annual Rent Savings"
         value={annualRentSavings}
+        stateHook={setAnnualRentSavings}
       />
       <LabeledInput
         testid="input-monthly-loan-paydown"
         labelText="Monthly Loan Paydown"
         value={monthlyLoanPaydown}
+        stateHook={setMonthlyLoanPaydown}
       />
       <LabeledInput
         testid="input-purchase-price"
         labelText="Purchase Price"
         value={purchasePrice}
+        stateHook={setPurchasePrice}
       />
       <LabeledInput
         testid="input-initial-investment"
         labelText="Initial Investment"
         value={initialInvestment}
+        stateHook={setInitialInvestment}
       />
     </div>
   );

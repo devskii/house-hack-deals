@@ -68,7 +68,7 @@ test("renders default expected profit", () => {
   expect(screen.getByText("$25/mo = Expected Profit")).toBeInTheDocument();
 });
 
-test("renders default net worth ROI for first three years", () => {
+test("renders default net worth ROI for the first year", () => {
   expect(
     screen.getByText("162% = Net Worth ROI (first year)")
   ).toBeInTheDocument();
@@ -103,24 +103,24 @@ test("re-renders net worth ROI when input values change", () => {
     "input-initial-investment"
   );
 
-  fireEvent.change(inputAnnualRentSavingsElement, { target: { value: 28900 } });
+  fireEvent.change(inputAnnualRentSavingsElement, { target: { value: 29200 } });
   expect(
     screen.getByText("163% = Net Worth ROI (first year)")
   ).toBeInTheDocument();
 
   fireEvent.change(inputMonthlyLoanPaydownElement, {
-    target: { value: 28900 },
+    target: { value: 2950 },
   });
   expect(
     screen.getByText("164% = Net Worth ROI (first year)")
   ).toBeInTheDocument();
 
-  fireEvent.change(inputPurchasePriceElement, { target: { value: 28900 } });
+  fireEvent.change(inputPurchasePriceElement, { target: { value: 520000 } });
   expect(
     screen.getByText("165% = Net Worth ROI (first year)")
   ).toBeInTheDocument();
 
-  fireEvent.change(inputInitialInvestmentElement, { target: { value: 28900 } });
+  fireEvent.change(inputInitialInvestmentElement, { target: { value: 49750 } });
   expect(
     screen.getByText("166% = Net Worth ROI (first year)")
   ).toBeInTheDocument();
