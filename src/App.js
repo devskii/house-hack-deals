@@ -6,6 +6,10 @@ function App() {
   const [monthlyPayment, setMonthlyPayment] = useState(3000);
   const [monthlyRent, setMonthlyRent] = useState(3400);
   const [reserves, setReserves] = useState(375);
+  const [annualRentSavings, setAnnualRentSavings] = useState(28800);
+  const [monthlyLoanPaydown, setMonthlyLoanPaydown] = useState(2900);
+  const [purchasePrice, setPurchasePrice] = useState(500000);
+  const [initialInvestment, setInitialInvestment] = useState(50000);
 
   const expectedProfit = monthlyRent - monthlyPayment - reserves;
 
@@ -30,10 +34,27 @@ function App() {
         value={reserves}
         stateHook={setReserves}
       />
+      <br />
+      <p>162% = Net Worth ROI (first year)</p>
       <LabeledInput
-        testid="input-net-worth-roi"
-        labelText="Net Worth ROI"
-        value={100}
+        testid="input-annual-rent-savings"
+        labelText="Annual Rent Savings"
+        value={annualRentSavings}
+      />
+      <LabeledInput
+        testid="input-monthly-loan-paydown"
+        labelText="Monthly Loan Paydown"
+        value={monthlyLoanPaydown}
+      />
+      <LabeledInput
+        testid="input-purchase-price"
+        labelText="Purchase Price"
+        value={purchasePrice}
+      />
+      <LabeledInput
+        testid="input-initial-investment"
+        labelText="Initial Investment"
+        value={initialInvestment}
       />
     </div>
   );
